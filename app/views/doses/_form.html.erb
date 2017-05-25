@@ -1,0 +1,10 @@
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <h4>New ingredient for <%= @cocktail.name %></h4>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description, label: "Amount" %>
+        <%= f.input :ingredient_id, collection: Ingredient::ALLINGREDIENTS %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>

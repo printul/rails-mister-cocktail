@@ -4,6 +4,7 @@ class DosesController < ApplicationController
 
   def new
     @dose = Dose.new
+    @ingredients = Ingredient.all
   end
 
   def create
@@ -17,7 +18,9 @@ class DosesController < ApplicationController
   end
 
   def destroy
+    cocktail_id = @dose.cocktail_id
     @dose.destroy
+    redirect_to cocktail_path(cocktail_id)
   end
 
   private

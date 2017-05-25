@@ -17,3 +17,4 @@ drinks = ingredients_list["drinks"]
 drinks.each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
 end
+
