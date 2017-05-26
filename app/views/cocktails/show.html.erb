@@ -1,22 +1,33 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://unsplash.it/200/300');">
-        <div class="card-category"><%= @cocktail.name %></div>
         <div class="card-description">
-        <p> The <%= @cocktail.name %> needs </p>
+        <p> your <strong><%= @cocktail.name %></strong> needs </p>
         <% @cocktail.doses.each do |dose| %>
           <p><%= dose.description %> <%= dose.ingredient.name %>
-          <%= link_to "delete dose", dose_path(dose), method: :delete %></p>
+          <%= link_to "delete", dose_path(dose), method: :delete %></p>
         <% end %>
         </div>
       </div>
     </div>
   </div>
 
-<%= render 'dose' %>
-
-<div class="row">
-  <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-    <%= link_to "main list", cocktails_path, class: "btn btn-success" %>
-  </div>
+  <div class="product">
+    <div class='product-upvote'>
+      <div class="product-arrow"></div>
+      <div class='product-count'>95</div>
+    </div>
+    <%= image_tag "https://unsplash.it/200/300", class: "product-image hidden-xs" %>
+    <div class='product-body'>
+      <h3><%= @cocktail.name %></h3>
+      <p>it's made with</p>
+    </div>
+    <ul class="list-inline product-controls product-controls-hidden hidden-sm hidden-xs">
+    <% @cocktail.doses.each do |dose| %>
+          <li><%= dose.description %> <%= dose.ingredient.name %>
+          <%= link_to "delete", dose_path(dose), method: :delete %></li>
+        <% end %>
+    </ul>
 </div>
+
+<%= render 'dose' %>
