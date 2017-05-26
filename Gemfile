@@ -29,6 +29,7 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'cloudinary'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,6 +41,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
