@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
   root "cocktails#index"
   resources :doses, only: [:destroy]
-  resources :cocktails, only: [:new, :create, :index, :show] do
+  resources :cocktails, only: [:new, :create, :index, :show, :destroy, :update] do
     resources :doses, only: [:new, :create]
   end
 end

@@ -6,6 +6,11 @@
         <%= f.input :ingredient_id, collection: Ingredient::ALLINGREDIENTS %>
         <%= f.submit %>
       <% end %>
+      <h4>Change picture for <%= @cocktail.name %>?</h4>
+      <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :photo, as: :attachinary %>
+        <%= f.submit %>
+      <% end %>
     </div>
   </div>
 

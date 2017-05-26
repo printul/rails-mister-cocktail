@@ -7,7 +7,8 @@
       <%= link_to "delete", dose_path(dose), method: :delete %></li>
     <% end %>
   </ul>
-    <a class="btn btn-info btn-small">GET IT</a>
+    <a class="btn btn-info btn-small">Order!</a>
+    <%= link_to "Delete cocktail", cocktail_path(@cocktail), class: "btn btn-danger btn-small", method: :delete %>
   </div>
 </div>
 <%= render 'dose' %>
