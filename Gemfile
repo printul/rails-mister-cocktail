@@ -22,6 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 # front end gems
+gem 'figaro'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
